@@ -1,0 +1,1 @@
+"""Streamlit entrypoint for LordOfTheCine."""
