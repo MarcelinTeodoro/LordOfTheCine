@@ -1,1 +1,1 @@
-"""LordOfTheCine source package."""
+"""Lord of the Cine source package."""

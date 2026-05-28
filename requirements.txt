@@ -1,7 +1,10 @@
 pandas
 numpy
 scikit-learn
-joblib
-pyarrow
 streamlit
-jupyter
+joblib
+matplotlib
+plotly
+requests
+python-dotenv
+pyarrow
