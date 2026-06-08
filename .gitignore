@@ -13,12 +13,6 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data and generated artifacts
-data/raw/*
-data/processed/*
-data/cache/*
-models/*
-reports/figures/*
 
 # Keep directory placeholders
 !data/raw/.gitkeep
