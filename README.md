@@ -231,7 +231,6 @@ python src/explainability/explanations.py
 
 ## Avaliação quantitativa
 
-A Fase 9 avalia o sistema com:
 
 - **Precision@10:** proporção de filmes relevantes entre as dez primeiras recomendações.
 - **Recall@10:** proporção dos filmes relevantes do teste recuperada nas dez primeiras posições.
