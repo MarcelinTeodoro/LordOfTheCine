@@ -302,6 +302,50 @@ python -m jupyter lab
 
 Eles documentam a análise exploratória, o pré-processamento, o modelo baseado em conteúdo e a avaliação quantitativa.
 
+## Solução de problemas
+
+### Arquivo Parquet não encontrado
+
+Se aparecer uma mensagem informando que `movies_processed.parquet` ou `ratings_processed.parquet` não existe, verifique se os arquivos do MovieLens estão em `data/raw/ml-latest-small/` e execute:
+
+```bash
+python src/data/preprocessing.py
+```
+
+### Matriz TF-IDF não encontrada
+
+Se `models/tfidf_matrix.joblib` não existir, execute:
+
+```bash
+python src/features/text_features.py
+```
+
+### Ambiente virtual não ativa
+
+Também é possível executar os comandos usando diretamente o Python do ambiente:
+
+```bash
+.venv/bin/python src/data/preprocessing.py
+.venv/bin/python -m streamlit run src/app/streamlit_app.py
+```
+
+No Windows, substitua `.venv/bin/python` por `.venv\Scripts\python.exe`.
+
+### Porta do Streamlit ocupada
+
+Escolha outra porta:
+
+```bash
+python -m streamlit run src/app/streamlit_app.py --server.port 8502
+```
+
+## Limitações atuais
+
+- O perfil depende das avaliações fornecidas durante a sessão.
+- O modelo não utiliza informações demográficas ou contexto temporal.
+- A qualidade das recomendações depende dos metadados, tags e avaliações disponíveis no MovieLens.
+- Maior precisão pode reduzir a cobertura do catálogo, conforme observado na avaliação.
+
 ## Reprodução completa
 
 Depois de instalar as dependências e preparar o MovieLens, todo o fluxo principal pode ser reproduzido nesta ordem:
